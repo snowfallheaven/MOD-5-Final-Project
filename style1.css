@@ -218,7 +218,6 @@ main {
   color: #666;
 }
 
-/* Placeholder for broken images */
 .movie-card__poster-placeholder {
   width: 100%;
   aspect-ratio: 2 / 3;
@@ -241,7 +240,6 @@ main {
   box-shadow: 1px 8px 24px rgb(0, 0, 0, 0.5);
 }
 
-/* Skeleton Loading */
 .movie-card--skeleton {
   background: #e0e0e0;
   width: 100%;
@@ -276,5 +274,44 @@ main {
   }
   100% {
     background-position: 200% 0;
+  }
+}
+
+/* 
+
+  MAIN
+
+*/
+
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  margin-top: 20px;
+}
+
+
+
+
+@media (max-width: 800px) {
+  nav {
+    grid-template-columns: 1fr;
+  }
+  .logo,
+  .search-form {
+    grid-column: 1;
+  }
+  .logo {
+    justify-self: center;
+    margin-bottom: 12px;
+  }
+  .logo__title {
+    font-size: 24px;
+    margin-left: 8px;
+  }
+  .search-form__input {
+    width: 320px;
   }
 }

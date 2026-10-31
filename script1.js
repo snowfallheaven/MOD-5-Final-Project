@@ -1,14 +1,15 @@
 // https://www.omdbapi.com/?apikey=1a28beb4&s
 
 const searchTerm = document.querySelector("#searchInput")
+const movieListEl = document.querySelector(".movies-grid");
 
 
 async function main() {
-  const movies = await fetch(`https://www.omdbapi.com/?apikey=1a28beb4&s=${searchTerm.value}`)
+  const movies = await fetch(`https://www.omdbapi.com/?apikey=1a28beb4&s=${searchTerm.value || "star wars"}`)
   const moviesData = await movies.json()
   console.log(moviesData)
   movieListEl.innerHTML = moviesData.Search
-  .map((movie) => movieHTML(movie)).join("")
+  .map((movie) => movieHTML(movie)).join('')
 }
 main()
 
