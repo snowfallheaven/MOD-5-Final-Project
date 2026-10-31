@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Frontend Movies</title>
   <link rel="stylesheet" href="style1.css">
   <script src="https://kit.fontawesome.com/f191e4acef.js" crossorigin="anonymous"></script>
 </head>
@@ -25,5 +25,35 @@
       </div>
     </form>
   </nav>
+  <main>
+    <div class="controls">
+      <p id="resultsInfo" class="resultsInfo"></p>
+      <div>
+        <label for="sortSelect">Sort:</label>
+        <select id="sortSelect">
+          <option value="default">Default</option>
+          <option value="a-z">A to Z</option>
+          <option value="z-a">Z to A</option>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </div>
+    </div>
+    <div class="movies-grid" id="moviesGrid">
+      <div class="movie-card">
+        <img class="movie-card__img" src="" alt="">
+        <h2 class="movie-card__title"></h2>
+        <p class="movie-card__year"></p>
+      </div>
+
+      <div class="movie-card__poster-placeholder">
+        Movie Poster
+        <br>
+        Not Available
+      </div>
+      
+    </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
