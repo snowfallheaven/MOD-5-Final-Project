@@ -19,11 +19,6 @@ searchBtn.addEventListener("submit", (e) => {
   main();
 });
 
-// function showMoviesGrid(imdbId) {
-//   localStorage.setItem ("imdbId100", imdbId)
-//   window.location.href = `${window.location.origin}/user.html`
-//   console.log(imdbId)
-// }
 
 function movieHTML(card) {
   return `
