@@ -1,10 +1,10 @@
 // https://www.omdbapi.com/?apikey=1a28beb4&s
 
-const movieListEl = document.querySelector(".movies-grid")
+const searchTerm = document.querySelector("#searchInput")
 
 
 async function main() {
-  const movies = await fetch(`https://www.omdbapi.com/?apikey=1a28beb4&s=${searchTerm}`)
+  const movies = await fetch(`https://www.omdbapi.com/?apikey=1a28beb4&s=${searchTerm.value}`)
   const moviesData = await movies.json()
   console.log(moviesData)
   movieListEl.innerHTML = moviesData.Search
@@ -12,11 +12,17 @@ async function main() {
 }
 main()
 
-function showMoviesGrid(imdbId) {
-  localStorage.setItem ("imdbId100", imdbId)
-  window.location.href = `${window.location.origin}/user.html`
-  console.log(imdbId)
-}
+const searchBtn = document.querySelector("#searchForm");
+searchBtn.addEventListener("submit", (e) => {
+  e.preventDefault()
+  main();
+});
+
+// function showMoviesGrid(imdbId) {
+//   localStorage.setItem ("imdbId100", imdbId)
+//   window.location.href = `${window.location.origin}/user.html`
+//   console.log(imdbId)
+// }
 
 function movieHTML(card) {
   return `
